@@ -11,6 +11,7 @@ This project is a Vite + React single-page site configured for GitHub Pages depl
 1. Node.js 20+
 2. A GitHub repository for this project
 3. Git installed locally
+4. Repository name should not end with a trailing dot (`.`) for GitHub Pages compatibility
 
 ## Run Locally
 
@@ -45,7 +46,7 @@ If this folder is not yet connected to GitHub:
 
    ```bash
    git init -b main
-   git remote add origin https://github.com/d3vanandharthi/Dada-Bar-and-Restaurant..git
+   git remote add origin https://github.com/d3vanandharthi/Dada-Bar-and-Restaurant.git
    ```
 
 2. Commit and push:
@@ -69,9 +70,9 @@ After every push to `main`, workflow [`.github/workflows/deploy-pages.yml`](.git
 
 Your site URL will be:
 
-`https://d3vanandharthi.github.io/Dada-Bar-and-Restaurant./`
+`https://d3vanandharthi.github.io/Dada-Bar-and-Restaurant/`
 
-If your repository name is different from `Dada-Bar-and-Restaurant.`, replace the path segment with the actual repository name.
+If your repository name is different from `Dada-Bar-and-Restaurant`, replace the path segment with the actual repository name.
 
 ## First-Run Fix (If Deploy Fails With 404)
 
@@ -89,6 +90,8 @@ If the site loads but appears blank, check the Pages source setting first:
 2. Set Source to `GitHub Actions`.
 
 `Deploy from a branch -> main` will publish the raw source `index.html`, which references `/src/main.tsx` and does not run directly on GitHub Pages.
+
+If your repository currently ends with a trailing dot (example: `Dada-Bar-and-Restaurant.`), rename it to remove the final dot and rerun the workflow.
 
 ## Validation Commands
 
