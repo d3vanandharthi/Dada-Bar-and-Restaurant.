@@ -81,6 +81,15 @@ If the deploy job shows `Failed to create deployment (status: 404)`, enable Page
 2. In Build and deployment, set Source to `GitHub Actions`.
 3. Re-run the latest workflow from the `Actions` tab.
 
+## Blank Page Fix
+
+If the site loads but appears blank, check the Pages source setting first:
+
+1. Open `Settings -> Pages`.
+2. Set Source to `GitHub Actions`.
+
+`Deploy from a branch -> main` will publish the raw source `index.html`, which references `/src/main.tsx` and does not run directly on GitHub Pages.
+
 ## Validation Commands
 
 Run these before pushing:
