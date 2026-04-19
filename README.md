@@ -69,9 +69,17 @@ After every push to `main`, workflow [`.github/workflows/deploy-pages.yml`](.git
 
 Your site URL will be:
 
-`https://d3vanandharthi.github.io/Dada-Bar-and-Restaurant../`
+`https://d3vanandharthi.github.io/Dada-Bar-and-Restaurant./`
 
-If your repository name is different from `Dada-Bar-and-Restaurant..`, replace the path segment with the actual repository name.
+If your repository name is different from `Dada-Bar-and-Restaurant.`, replace the path segment with the actual repository name.
+
+## First-Run Fix (If Deploy Fails With 404)
+
+If the deploy job shows `Failed to create deployment (status: 404)`, enable Pages once in repository settings:
+
+1. Open `Settings -> Pages` in your GitHub repository.
+2. In Build and deployment, set Source to `GitHub Actions`.
+3. Re-run the latest workflow from the `Actions` tab.
 
 ## Validation Commands
 
