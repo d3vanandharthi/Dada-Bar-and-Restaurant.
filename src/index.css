@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-dada-midnight: #1a1209;
+  --color-dada-laterite: #7c2d12;
+  --color-dada-amber: #c87941;
+  --color-dada-gold: #e8c97e;
+  --color-dada-leaf: #2d4a1e;
+  --color-dada-cream: #f0e6ce;
+
+  --font-sans: "Space Mono", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: var(--color-dada-midnight);
+  color: var(--color-dada-cream);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-dada-laterite);
+  color: var(--color-dada-cream);
+}
